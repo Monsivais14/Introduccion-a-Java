@@ -4,33 +4,47 @@ public class Usuario{
     public static void main(String args[]){
 
         Scanner in = new Scanner(System.in);
-        String user = ("");
-        String password = ("");
-        String Usernew = ("");
-        String Passwordnew = ("");
+        String mail;
+        String password;
+        String eleccion;
+        String mails[] = new String[6];
 
         System.out.println("");
-        System.out.println("╔══╗───────────────────╔╗───────╔═╗╔═╦═══╦═══╗\n" +
-                        "║╔╗║───────────────────║║───────║║╚╝║║╔═╗║╔═╗║\n" +
-                        "║╚╝╚╦╦══╦═╗╔╗╔╦══╦═╗╔╦═╝╠══╗╔══╗║╔╗╔╗║╚══╣║─╚╝\n" +
-                        "║╔═╗╠╣║═╣╔╗╣╚╝║║═╣╔╗╬╣╔╗║╔╗║║╔╗║║║║║║╠══╗║║╔═╗\n" +
-                        "║╚═╝║║║═╣║║╠╗╔╣║═╣║║║║╚╝║╚╝║║╔╗║║║║║║║╚═╝║╚╩═║\n" +
-                        "╚═══╩╩══╩╝╚╝╚╝╚══╩╝╚╩╩══╩══╝╚╝╚╝╚╝╚╝╚╩═══╩═══╝");
+        System.out.println("" +
+                        "╔══╗───────────────────╔╗───\n" +
+                        "║╔╗║───────────────────║║───\n" +
+                        "║╚╝╚╦╦══╦═╗╔╗╔╦══╦═╗╔╦═╝╠══╗\n" +
+                        "║╔═╗╠╣║═╣╔╗╣╚╝║║═╣╔╗╬╣╔╗║╔╗║\n" +
+                        "║╚═╝║║║═╣║║╠╗╔╣║═╣║║║║╚╝║╚╝║\n" +
+                        "╚═══╩╩══╩╝╚╝╚╝╚══╩╝╚╩╩══╩══╝");
 
+        System.out.println("***************************");
+        System.out.println("Bienvenido");
+        System.out.println("Deseas iniciar sesion o registrate?");
+        System.out.println("Iniciar || Registrarme");
+        eleccion = in.nextLine();
 
-        System.out.println("Inglesa el nombre de usuario");
-        user =  in.nextLine();
-        System.out.println("");
+                                                                        // pendiente
+        if(eleccion.equalsIgnoreCase("Iniciar")){
+            System.out.println("Ingresa tu email");
+              if(mails[0].equals("")){
 
-        System.out.println("Contraseña");
-        password =  in.nextLine();
-        System.out.println("");
-
-        if(user.equalsIgnoreCase("Uriel") && password.equalsIgnoreCase("U124")){
-            System.out.println("Bievenido Uriel");
-        }else{
-            System.out.println("Contraseña o nombre de usuario incorrecto.");
+              }
         }
+        if(eleccion.equalsIgnoreCase("Registrarme")){
+            System.out.println("Cual es tu email");
+            mails[0] = in.nextLine();
+        }
+        else{
+            System.out.println("No valido");
+        }
+
+
+
+
+
+
+
 
 
 
