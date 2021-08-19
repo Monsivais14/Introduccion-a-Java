@@ -17,7 +17,7 @@ public class Ohm extends JFrame implements ActionListener, ItemListener {
    public Ohm(){
        setLayout(null);
        setDefaultCloseOperation(EXIT_ON_CLOSE);
-       setTitle("Ley de ohm");
+       setTitle("Ley de ohm ");
 
        /////////
 
