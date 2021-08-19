@@ -9,7 +9,6 @@ public class Ohm extends JFrame implements ActionListener, ItemListener {
 
     private JLabel imavoltaje,imacorriente,imaresistencia,imapotencia;
     private JLabel jvoltaje,jcorriente,jresistencia,jpotencia;
-    private JLabel error;
     private JTextField voltaje,corriente,resistencia,potencia;
     private JComboBox combovoltaje,combocorriente,comboresistencia,combopotencia;
     private JButton limpiar, calcular;
@@ -18,7 +17,7 @@ public class Ohm extends JFrame implements ActionListener, ItemListener {
    public Ohm(){
        setLayout(null);
        setDefaultCloseOperation(EXIT_ON_CLOSE);
-       setTitle("Ley de ohm v1.0");
+       setTitle("Ley de ohm");
 
        /////////
 
@@ -59,11 +58,6 @@ public class Ohm extends JFrame implements ActionListener, ItemListener {
        calcular.setBounds(150,420,90,90);
        calcular.addActionListener(this);
        add(calcular);
-
-       error = new JLabel("Introducir solo dos parametros");
-       error.setBounds(40,510,250,30);
-       error.setFont(new Font("Halmin",3,14));
-       add(error);
 
        /////////
 
@@ -167,6 +161,9 @@ public class Ohm extends JFrame implements ActionListener, ItemListener {
                 JOptionPane.showMessageDialog(null, "Introducir solo dos parámetros para efectuar el cálculo. \n" +
                         "Para valores con decimales usar el punto como separador y no la coma, \n" +
                         "                                         por ejemplo: 2.45");
+            }
+            if (!svoltaje.isEmpty() && !scorriente.isEmpty() && !sresistencia.isEmpty() && !spotencia.isEmpty()){
+                JOptionPane.showMessageDialog(null, "Introducir solo dos parámetros para efectuar el cálculo.");
             }
 
             ////////////////////////////////////////////
